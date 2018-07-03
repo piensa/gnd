@@ -68,8 +68,8 @@ coverage: build
 
 # Builds minio locally.
 build: checks
-	@echo "Building minio binary to './mc'"
-	@CGO_ENABLED=0 go build -tags kqueue --ldflags $(BUILD_LDFLAGS) -o $(PWD)/mc
+	@echo "Building minio binary to './hil'"
+	@CGO_ENABLED=0 go build -tags kqueue --ldflags $(BUILD_LDFLAGS) -o $(PWD)/hil
 
 pkg-add:
 	@echo "Adding new package $(PKG)"
@@ -88,13 +88,13 @@ pkg-list:
 
 # Builds minio and installs it to $GOPATH/bin.
 install: build
-	@echo "Installing mc binary to '$(GOPATH)/bin/mc'"
-	@mkdir -p $(GOPATH)/bin && cp $(PWD)/mc $(GOPATH)/bin/mc
-	@echo "Installation successful. To learn more, try \"mc --help\"."
+	@echo "Installing hil binary to '$(GOPATH)/bin/hil'"
+	@mkdir -p $(GOPATH)/bin && cp $(PWD)/hil $(GOPATH)/bin/hil
+	@echo "Installation successful. To learn more, try \"hil --help\"."
 
 clean:
 	@echo "Cleaning up all the generated files"
 	@find . -name '*.test' | xargs rm -fv
-	@rm -rvf mc
+	@rm -rvf hil
 	@rm -rvf build
 	@rm -rvf release
