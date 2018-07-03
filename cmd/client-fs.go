@@ -29,9 +29,9 @@ import (
 
 	"io/ioutil"
 
-	"github.com/minio/mc/pkg/hookreader"
-	"github.com/minio/mc/pkg/ioutils"
-	"github.com/minio/mc/pkg/probe"
+	"github.com/piensa/hil/pkg/hookreader"
+	"github.com/piensa/hil/pkg/ioutils"
+	"github.com/piensa/hil/pkg/probe"
 	"github.com/rjeczalik/notify"
 )
 

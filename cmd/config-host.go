@@ -20,8 +20,8 @@ import (
 	"encoding/json"
 
 	"github.com/minio/cli"
-	"github.com/minio/mc/pkg/console"
-	"github.com/minio/mc/pkg/probe"
+	"github.com/piensa/hil/pkg/console"
+	"github.com/piensa/hil/pkg/probe"
 )
 
 var configHostCmd = cli.Command{

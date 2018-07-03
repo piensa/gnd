@@ -21,8 +21,8 @@ import (
 	"fmt"
 
 	"github.com/minio/cli"
-	"github.com/minio/mc/pkg/console"
-	"github.com/minio/mc/pkg/probe"
+	"github.com/piensa/hil/pkg/console"
+	"github.com/piensa/hil/pkg/probe"
 )
 
 // causeMessage container for golang error messages

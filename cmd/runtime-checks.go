@@ -22,7 +22,7 @@ import (
 	"strings"
 
 	"github.com/hashicorp/go-version"
-	"github.com/minio/mc/pkg/console"
+	"github.com/piensa/hil/pkg/console"
 )
 
 // check if minimum Go version is met.

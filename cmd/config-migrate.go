@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/minio/mc/pkg/console"
-	"github.com/minio/mc/pkg/probe"
 	"github.com/minio/minio/pkg/quick"
+	"github.com/piensa/hil/pkg/console"
+	"github.com/piensa/hil/pkg/probe"
 )
 
 // migrate config files from the any older version to the latest.

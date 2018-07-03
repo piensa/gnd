@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/minio/mc/pkg/probe"
+	"github.com/piensa/hil/pkg/probe"
 )
 
 type dummyErr error

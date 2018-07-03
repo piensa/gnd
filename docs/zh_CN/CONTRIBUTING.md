@@ -1,5 +1,5 @@
 ### 设置你的mc Github Repository
-Fork [mc upstream](https://github.com/minio/mc/fork)源码仓库到你的个人仓库。
+Fork [mc upstream](https://github.com/piensa/hil/fork)源码仓库到你的个人仓库。
 ```sh
 $ mkdir -p $GOPATH/src/github.com/minio
 $ cd $GOPATH/src/github.com/minio

@@ -23,8 +23,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/minio/mc/pkg/console"
-	"github.com/minio/mc/pkg/httptracer"
+	"github.com/piensa/hil/pkg/console"
+	"github.com/piensa/hil/pkg/httptracer"
 )
 
 // traceV4 - tracing structure for signature version '4'.

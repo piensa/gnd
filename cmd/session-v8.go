@@ -28,9 +28,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/minio/mc/pkg/console"
-	"github.com/minio/mc/pkg/probe"
 	"github.com/minio/minio/pkg/quick"
+	"github.com/piensa/hil/pkg/console"
+	"github.com/piensa/hil/pkg/probe"
 )
 
 // sessionV8Header for resumable sessions.

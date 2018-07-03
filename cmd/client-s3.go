@@ -33,13 +33,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/minio/mc/pkg/httptracer"
-	"github.com/minio/mc/pkg/probe"
 	"github.com/minio/minio-go"
 	"github.com/minio/minio-go/pkg/credentials"
 	"github.com/minio/minio-go/pkg/encrypt"
 	"github.com/minio/minio-go/pkg/policy"
 	"github.com/minio/minio-go/pkg/s3utils"
+	"github.com/piensa/hil/pkg/httptracer"
+	"github.com/piensa/hil/pkg/probe"
 )
 
 // S3 client

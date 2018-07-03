@@ -22,8 +22,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/minio/mc/pkg/probe"
 	minio "github.com/minio/minio-go"
+	"github.com/piensa/hil/pkg/probe"
 )
 
 // DirOpt - list directory option.

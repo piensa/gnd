@@ -21,8 +21,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/minio/mc/pkg/probe"
 	"github.com/minio/minio/pkg/quick"
+	"github.com/piensa/hil/pkg/probe"
 )
 
 // shareEntryV1 - container for each download/upload entries.

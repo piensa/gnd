@@ -38,8 +38,8 @@ test_script:
   # Unit tests
   - ps: Add-AppveyorTest "Unit Tests" -Outcome Running
   - mkdir build\coverage
-  - for /f "" %%G in ('go list github.com/minio/mc/...') do ( go test -v -race %%G )
-  - go test -v -coverprofile=build\coverage\coverage.txt -covermode=atomic github.com/minio/mc/cmd
+  - for /f "" %%G in ('go list github.com/piensa/hil/...') do ( go test -v -race %%G )
+  - go test -v -coverprofile=build\coverage\coverage.txt -covermode=atomic github.com/piensa/hil/cmd
   - ps: Update-AppveyorTest "Unit Tests" -Outcome Passed
 
 after_test:

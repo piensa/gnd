@@ -23,7 +23,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/minio/mc/pkg/probe"
+	"github.com/piensa/hil/pkg/probe"
 	"golang.org/x/net/lex/httplex"
 )
 

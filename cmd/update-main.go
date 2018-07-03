@@ -30,8 +30,8 @@ import (
 
 	"github.com/fatih/color"
 	"github.com/minio/cli"
-	"github.com/minio/mc/pkg/console"
-	"github.com/minio/mc/pkg/probe"
+	"github.com/piensa/hil/pkg/console"
+	"github.com/piensa/hil/pkg/probe"
 )
 
 // Check for new software updates.
@@ -152,7 +152,7 @@ func IsSourceBuild() bool {
 // The style should be
 //   Minio (<OS>; <ARCH>[; docker][; source])  mc/<VERSION> mc/<RELEASE-TAG> mc/<COMMIT-ID>
 //
-// For any change here should be discussed by openning an issue at https://github.com/minio/mc/issues.
+// For any change here should be discussed by openning an issue at https://github.com/piensa/hil/issues.
 func getUserAgent() string {
 	userAgent := "Minio (" + runtime.GOOS + "; " + runtime.GOARCH
 	if IsDocker() {
@@ -240,7 +240,7 @@ func getLatestReleaseTime(timeout time.Duration) (releaseTime time.Time, err *pr
 
 func getDownloadURL() (downloadURL string) {
 	if IsDocker() {
-		return "docker pull minio/mc"
+		return "docker pull piensa/hil"
 	}
 
 	if runtime.GOOS == "windows" {

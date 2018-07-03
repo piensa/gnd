@@ -11,8 +11,8 @@ RUN  \
      apk add --no-cache ca-certificates && \
      apk add --no-cache --virtual .build-deps git && \
      echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf && \
-     go get -v -d github.com/minio/mc && \
-     cd /go/src/github.com/minio/mc && \
+     go get -v -d github.com/piensa/hil && \
+     cd /go/src/github.com/piensa/hil && \
      go install -v -ldflags "$(go run buildscripts/gen-ldflags.go)" && \
      rm -rf /go/pkg /go/src /usr/local/go && apk del .build-deps
 
