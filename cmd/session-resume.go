@@ -24,8 +24,8 @@ import (
 	"github.com/fatih/color"
 	"github.com/minio/cli"
 	"github.com/minio/minio/pkg/trie"
-	"github.com/piensa/hil/pkg/console"
-	"github.com/piensa/hil/pkg/probe"
+	"github.com/piensa/geo/pkg/console"
+	"github.com/piensa/geo/pkg/probe"
 )
 
 var sessionResume = cli.Command{
@@ -133,7 +133,7 @@ func resumeSession(sessionID string) {
 	if s.Header.RootPath != "" {
 		// change folder to RootPath.
 		e = os.Chdir(s.Header.RootPath)
-		fatalIf(probe.NewError(e), "Unable to change working folder to root path while resuming session.")
+		fatalIf(probe.NewError(e), "Unable to change working folder to root path wgeoe resuming session.")
 	}
 	sessionExecute(s)
 	err = s.Close()

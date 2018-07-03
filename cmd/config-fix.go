@@ -21,8 +21,8 @@ import (
 	"strings"
 
 	"github.com/minio/minio/pkg/quick"
-	"github.com/piensa/hil/pkg/console"
-	"github.com/piensa/hil/pkg/probe"
+	"github.com/piensa/geo/pkg/console"
+	"github.com/piensa/geo/pkg/probe"
 )
 
 func fixConfig() {

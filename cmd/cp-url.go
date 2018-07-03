@@ -20,7 +20,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/piensa/hil/pkg/probe"
+	"github.com/piensa/geo/pkg/probe"
 )
 
 type copyURLsType uint8

@@ -20,7 +20,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/piensa/hil/pkg/probe"
+	"github.com/piensa/geo/pkg/probe"
 )
 
 // EventType represents the type of the event occurred.

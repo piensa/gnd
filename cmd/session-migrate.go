@@ -21,8 +21,8 @@ import (
 	"strconv"
 
 	"github.com/minio/minio/pkg/quick"
-	"github.com/piensa/hil/pkg/console"
-	"github.com/piensa/hil/pkg/probe"
+	"github.com/piensa/geo/pkg/console"
+	"github.com/piensa/geo/pkg/probe"
 )
 
 // Migrates session header version '7' to '8'. The only
@@ -34,14 +34,14 @@ func migrateSessionV7ToV8() {
 			if os.IsNotExist(err.ToGoError()) {
 				continue
 			}
-			fatalIf(err.Trace(sid), "Unable to load version `7`. Migration failed please report this issue at https://github.com/piensa/hil/issues.")
+			fatalIf(err.Trace(sid), "Unable to load version `7`. Migration failed please report this issue at https://github.com/piensa/geo/issues.")
 		}
 
 		// Close underlying session data file.
 		sV7.DataFP.Close()
 
 		sessionVersion, e := strconv.Atoi(sV7.Header.Version)
-		fatalIf(probe.NewError(e), "Unable to load version `7`. Migration failed please report this issue at https://github.com/piensa/hil/issues.")
+		fatalIf(probe.NewError(e), "Unable to load version `7`. Migration failed please report this issue at https://github.com/piensa/geo/issues.")
 		if sessionVersion > 7 { // It is new format.
 			continue
 		}
@@ -89,11 +89,11 @@ func migrateSessionV6ToV7() {
 			if os.IsNotExist(err.ToGoError()) {
 				continue
 			}
-			fatalIf(err.Trace(sid), "Unable to load version `6`. Migration failed please report this issue at https://github.com/piensa/hil/issues.")
+			fatalIf(err.Trace(sid), "Unable to load version `6`. Migration failed please report this issue at https://github.com/piensa/geo/issues.")
 		}
 
 		sessionVersion, e := strconv.Atoi(sV6Header.Version)
-		fatalIf(probe.NewError(e), "Unable to load version `6`. Migration failed please report this issue at https://github.com/piensa/hil/issues.")
+		fatalIf(probe.NewError(e), "Unable to load version `6`. Migration failed please report this issue at https://github.com/piensa/geo/issues.")
 		if sessionVersion > 6 { // It is new format.
 			continue
 		}
@@ -139,11 +139,11 @@ func migrateSessionV5ToV6() {
 			if os.IsNotExist(err.ToGoError()) {
 				continue
 			}
-			fatalIf(err.Trace(sid), "Unable to load version `6`. Migration failed please report this issue at https://github.com/piensa/hil/issues.")
+			fatalIf(err.Trace(sid), "Unable to load version `6`. Migration failed please report this issue at https://github.com/piensa/geo/issues.")
 		}
 
 		sessionVersion, e := strconv.Atoi(sV6Header.Version)
-		fatalIf(probe.NewError(e), "Unable to load version `6`. Migration failed please report this issue at https://github.com/piensa/hil/issues.")
+		fatalIf(probe.NewError(e), "Unable to load version `6`. Migration failed please report this issue at https://github.com/piensa/geo/issues.")
 		if sessionVersion > 5 { // It is new format.
 			continue
 		}

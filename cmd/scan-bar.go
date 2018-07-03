@@ -21,7 +21,7 @@ import (
 	"strings"
 
 	"github.com/dustin/go-humanize"
-	"github.com/piensa/hil/pkg/console"
+	"github.com/piensa/geo/pkg/console"
 )
 
 // fixateScanBar truncates or stretches text to fit within the terminal size.

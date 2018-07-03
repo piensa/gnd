@@ -24,7 +24,7 @@ import (
 	"runtime"
 
 	"github.com/minio/go-homedir"
-	"github.com/piensa/hil/pkg/probe"
+	"github.com/piensa/geo/pkg/probe"
 )
 
 // mcCustomConfigDir contains the whole path to config dir. Only access via get/set functions.

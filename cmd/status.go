@@ -17,8 +17,8 @@
 package cmd
 
 import (
-	"github.com/piensa/hil/pkg/console"
-	"github.com/piensa/hil/pkg/probe"
+	"github.com/piensa/geo/pkg/console"
+	"github.com/piensa/geo/pkg/probe"
 )
 
 // Status implements a interface that can be used in quit mode or with progressbar.

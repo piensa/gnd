@@ -30,8 +30,8 @@ import (
 	"github.com/cheggaaa/pb"
 	"github.com/minio/cli"
 	"github.com/minio/minio/pkg/words"
-	"github.com/piensa/hil/pkg/console"
-	"github.com/piensa/hil/pkg/probe"
+	"github.com/piensa/geo/pkg/console"
+	"github.com/piensa/geo/pkg/probe"
 	"github.com/pkg/profile"
 )
 
@@ -311,7 +311,7 @@ func registerApp() *cli.App {
 
 	app.HideVersion = true
 	app.HideHelpCommand = true
-	app.Usage = "hil - A gis client"
+	app.Usage = "geo - A gis client"
 	app.Commands = commands
 	app.Author = "piensa.co"
 	app.Version = Version

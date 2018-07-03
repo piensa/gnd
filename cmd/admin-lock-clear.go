@@ -24,7 +24,7 @@ import (
 
 	"github.com/minio/cli"
 	"github.com/minio/minio/pkg/madmin"
-	"github.com/piensa/hil/pkg/probe"
+	"github.com/piensa/geo/pkg/probe"
 )
 
 var (

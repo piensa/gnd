@@ -27,20 +27,20 @@ version  Print version info.
 ## 1.  Download Minio Client
 ### Docker Stable
 ```
-docker pull piensa/hil
-docker run piensa/hil ls play
+docker pull piensa/geo
+docker run piensa/geo ls play
 ```
 
 ### Docker Edge
 ```
-docker pull piensa/hil:edge
-docker run piensa/hil:edge ls play
+docker pull piensa/geo:edge
+docker run piensa/geo:edge ls play
 ```
 
 **Note:** Above examples run `mc` against Minio [_play_ environment](#test-your-setup) by default. To run `mc` against other S3 compatible servers, start the container this way:
 
 ```sh
-docker run -it --entrypoint=/bin/sh piensa/hil
+docker run -it --entrypoint=/bin/sh piensa/geo
 ```
 
 then use the [`mc config` command](#add-a-cloud-storage-service).
@@ -78,8 +78,8 @@ Source installation is intended only for developers and advanced users. `mc upda
 If you do not have a working Golang environment, please follow [How to install Golang](https://docs.minio.io/docs/how-to-install-golang).
 
 ```sh
-go get -d github.com/piensa/hil
-cd ${GOPATH}/src/github.com/piensa/hil
+go get -d github.com/piensa/geo
+cd ${GOPATH}/src/github.com/piensa/geo
 make
 ```
 

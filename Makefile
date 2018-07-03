@@ -33,8 +33,8 @@ fmt:
 
 lint:
 	@echo "Running $@"
-	@${GOPATH}/bin/golint -set_exit_status github.com/piensa/hil/cmd...
-	@${GOPATH}/bin/golint -set_exit_status github.com/piensa/hil/pkg...
+	@${GOPATH}/bin/golint -set_exit_status github.com/piensa/geo/cmd...
+	@${GOPATH}/bin/golint -set_exit_status github.com/piensa/geo/pkg...
 
 ineffassign:
 	@echo "Running $@"
@@ -54,7 +54,7 @@ spelling:
 	@${GOPATH}/bin/misspell -error `find pkg/`
 	@${GOPATH}/bin/misspell -error `find docs/`
 
-# Builds minio, runs the verifiers then runs the tests.
+# Builds geo, runs the verifiers then runs the tests.
 check: test
 test: verifiers build
 	@echo "Running unit tests"
@@ -63,13 +63,13 @@ test: verifiers build
 	@(env bash $(PWD)/functional-tests.sh)
 
 coverage: build
-	@echo "Running all coverage for minio"
+	@echo "Running all coverage for geo"
 	@(env bash $(PWD)/buildscripts/go-coverage.sh)
 
-# Builds minio locally.
+# Builds geo locally.
 build: checks
-	@echo "Building minio binary to './hil'"
-	@CGO_ENABLED=0 go build -tags kqueue --ldflags $(BUILD_LDFLAGS) -o $(PWD)/hil
+	@echo "Building geo binary to './geo'"
+	@CGO_ENABLED=0 go build -tags kqueue --ldflags $(BUILD_LDFLAGS) -o $(PWD)/geo
 
 pkg-add:
 	@echo "Adding new package $(PKG)"
@@ -86,15 +86,15 @@ pkg-remove:
 pkg-list:
 	@$(GOPATH)/bin/govendor list
 
-# Builds minio and installs it to $GOPATH/bin.
+# Builds geo and installs it to $GOPATH/bin.
 install: build
-	@echo "Installing hil binary to '$(GOPATH)/bin/hil'"
-	@mkdir -p $(GOPATH)/bin && cp $(PWD)/hil $(GOPATH)/bin/hil
-	@echo "Installation successful. To learn more, try \"hil --help\"."
+	@echo "Installing geo binary to '$(GOPATH)/bin/geo'"
+	@mkdir -p $(GOPATH)/bin && cp $(PWD)/geo $(GOPATH)/bin/geo
+	@echo "Installation successful. To learn more, try \"geo --help\"."
 
 clean:
 	@echo "Cleaning up all the generated files"
 	@find . -name '*.test' | xargs rm -fv
-	@rm -rvf hil
+	@rm -rvf geo
 	@rm -rvf build
 	@rm -rvf release

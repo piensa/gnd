@@ -20,7 +20,7 @@ import (
 	"fmt"
 
 	"github.com/minio/cli"
-	"github.com/piensa/hil/pkg/console"
+	"github.com/piensa/geo/pkg/console"
 )
 
 func checkCopySyntax(ctx *cli.Context) {

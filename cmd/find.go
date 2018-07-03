@@ -28,8 +28,8 @@ import (
 	"time"
 
 	"github.com/dustin/go-humanize"
-	"github.com/piensa/hil/pkg/console"
-	"github.com/piensa/hil/pkg/probe"
+	"github.com/piensa/geo/pkg/console"
+	"github.com/piensa/geo/pkg/probe"
 
 	// golang does not support flat keys for path matching, find does
 	"github.com/minio/minio/pkg/wildcard"
@@ -85,7 +85,7 @@ func nameMatch(pattern, path string) bool {
 // pathMatch reports whether path matches the wildcard pattern.
 // supports  '*' and '?' wildcards in the pattern string.
 // unlike path.Match(), considers a path as a flat name space
-// while matching the pattern. The difference is illustrated in
+// wgeoe matching the pattern. The difference is illustrated in
 // the example here https://play.golang.org/p/Ega9qgD4Qz .
 func pathMatch(pattern, path string) bool {
 	return wildcard.Match(pattern, path)

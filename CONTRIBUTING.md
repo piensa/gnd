@@ -1,5 +1,5 @@
 ### Setup your mc Github Repository
-Fork [mc upstream](https://github.com/piensa/hil/fork) source repository to your own personal repository.
+Fork [mc upstream](https://github.com/piensa/geo/fork) source repository to your own personal repository.
 ```sh
 $ mkdir -p $GOPATH/src/github.com/minio
 $ cd $GOPATH/src/github.com/minio

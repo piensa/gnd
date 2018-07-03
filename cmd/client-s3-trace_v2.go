@@ -22,8 +22,8 @@ import (
 	"net/http/httputil"
 	"strings"
 
-	"github.com/piensa/hil/pkg/console"
-	"github.com/piensa/hil/pkg/httptracer"
+	"github.com/piensa/geo/pkg/console"
+	"github.com/piensa/geo/pkg/httptracer"
 )
 
 // traceV2 - tracing structure for signature version '2'.

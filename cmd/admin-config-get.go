@@ -20,7 +20,7 @@ import (
 	"encoding/json"
 
 	"github.com/minio/cli"
-	"github.com/piensa/hil/pkg/probe"
+	"github.com/piensa/geo/pkg/probe"
 )
 
 var adminConfigGetCmd = cli.Command{

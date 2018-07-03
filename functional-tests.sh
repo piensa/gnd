@@ -628,7 +628,7 @@ function test_cat_object_with_sse_error()
 
 function test_copy_object_with_sse()
 {
-    # test server side copy and remove operation - target is unencrypted while source is encrypted
+    # test server side copy and remove operation - target is unencrypted wgeoe source is encrypted
     show "${FUNCNAME[0]}"
     start_time=$(get_time)
     prefix="prefix"

@@ -1,5 +1,5 @@
 # Minio Client Quickstart Guide
-[![Slack](https://slack.minio.io/slack?type=svg)](https://slack.minio.io) [![Go Report Card](https://goreportcard.com/badge/piensa/hil)](https://goreportcard.com/report/piensa/hil) [![Docker Pulls](https://img.shields.io/docker/pulls/piensa/hil.svg?maxAge=604800)](https://hub.docker.com/r/piensa/hil/)
+[![Slack](https://slack.minio.io/slack?type=svg)](https://slack.minio.io) [![Go Report Card](https://goreportcard.com/badge/piensa/geo)](https://goreportcard.com/report/piensa/geo) [![Docker Pulls](https://img.shields.io/docker/pulls/piensa/geo.svg?maxAge=604800)](https://hub.docker.com/r/piensa/geo/)
 
 Minio Client (mc) provides a modern alternative to UNIX commands like ls, cat, cp, mirror, diff, find etc. It supports filesystems and Amazon S3 compatible cloud storage service (AWS Signature v2 and v4).
 
@@ -27,20 +27,20 @@ version  Print version info.
 ## Docker Container
 ### Stable
 ```
-docker pull piensa/hil
-docker run piensa/hil ls play
+docker pull piensa/geo
+docker run piensa/geo ls play
 ```
 
 ### Edge
 ```
-docker pull piensa/hil:edge
-docker run piensa/hil:edge ls play
+docker pull piensa/geo:edge
+docker run piensa/geo:edge ls play
 ```
 
 **Note:** Above examples run `mc` against Minio [_play_ environment](#test-your-setup) by default. To run `mc` against other S3 compatible servers, start the container this way:
 
 ```sh
-docker run -it --entrypoint=/bin/sh piensa/hil
+docker run -it --entrypoint=/bin/sh piensa/geo
 ```
 
 then use the [`mc config` command](#add-a-cloud-storage-service).
@@ -82,8 +82,8 @@ Source installation is intended only for developers and advanced users. `mc upda
 If you do not have a working Golang environment, please follow [How to install Golang](https://docs.minio.io/docs/how-to-install-golang).
 
 ```sh
-go get -d github.com/piensa/hil
-cd ${GOPATH}/src/github.com/piensa/hil
+go get -d github.com/piensa/geo
+cd ${GOPATH}/src/github.com/piensa/geo
 make
 ```
 
@@ -175,10 +175,10 @@ alias find='mc find'
 ```
 
 ### Shell autocompletion
-You may also download [`autocomplete/bash_autocomplete`](https://raw.githubusercontent.com/piensa/hil/master/autocomplete/bash_autocomplete) into `/etc/bash_completion.d/` and rename it to `mc`. Don't forget to source the file to make it active on your current shell.
+You may also download [`autocomplete/bash_autocomplete`](https://raw.githubusercontent.com/piensa/geo/master/autocomplete/bash_autocomplete) into `/etc/bash_completion.d/` and rename it to `mc`. Don't forget to source the file to make it active on your current shell.
 
 ```sh
-sudo wget https://raw.githubusercontent.com/piensa/hil/master/autocomplete/bash_autocomplete -O /etc/bash_completion.d/mc
+sudo wget https://raw.githubusercontent.com/piensa/geo/master/autocomplete/bash_autocomplete -O /etc/bash_completion.d/mc
 source /etc/bash_completion.d/mc
 ```
 
@@ -194,7 +194,7 @@ cat      cp       events   mb       pipe     rm       share    version
 - [The Minio documentation website](https://docs.minio.io)
 
 ## Contribute to Minio Project
-Please follow Minio [Contributor's Guide](https://github.com/piensa/hil/blob/master/CONTRIBUTING.md)
+Please follow Minio [Contributor's Guide](https://github.com/piensa/geo/blob/master/CONTRIBUTING.md)
 
 
 ## License

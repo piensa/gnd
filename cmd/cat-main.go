@@ -30,7 +30,7 @@ import (
 	"golang.org/x/crypto/ssh/terminal"
 
 	"github.com/minio/cli"
-	"github.com/piensa/hil/pkg/probe"
+	"github.com/piensa/geo/pkg/probe"
 )
 
 var (

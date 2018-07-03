@@ -25,20 +25,20 @@ version  输出版本信息。
 ## 1.  下载Minio Client
 ### Docker稳定版
 ```
-docker pull piensa/hil
-docker run piensa/hil ls play
+docker pull piensa/geo
+docker run piensa/geo ls play
 ```
 
 ### Docker尝鲜版
 ```
-docker pull piensa/hil:edge
-docker run piensa/hil:edge ls play
+docker pull piensa/geo:edge
+docker run piensa/geo:edge ls play
 ```
 
 **注意:** 上述示例默认使用Minio[演示环境](#test-your-setup)做演示，如果想用`mc`操作其它S3兼容的服务，采用下面的方式来启动容器：
 
 ```sh
-docker run -it --entrypoint=/bin/sh piensa/hil
+docker run -it --entrypoint=/bin/sh piensa/geo
 ```
 
 然后使用[`mc config`命令](#add-a-cloud-storage-service)。
@@ -76,8 +76,8 @@ mc.exe --help
 如果您没有Golang环境，请按照 [如何安装Golang](https://docs.minio.io/docs/how-to-install-golang)。
 
 ```sh
-go get -d github.com/piensa/hil
-cd ${GOPATH}/src/github.com/piensa/hil
+go get -d github.com/piensa/geo
+cd ${GOPATH}/src/github.com/piensa/geo
 make
 ```
 
