@@ -1,0 +1,25 @@
+name: geo-bin
+version: master
+summary: ls, cp, mkdir, mirror commands for filesystems and object storage.
+description: |
+  Geo provides a modern alternative to UNIX commands
+  like ls, cat, cp, mirror, diff etc. It supports filesystems and
+  Amazon S3 compatible cloud storage service (AWS Signature v2 and v4).
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: devmode
+
+apps:
+  geo-bin:
+    command: geo
+    plugs: [home, network, network-bind]
+    aliases: [geo]
+
+parts:
+  geo:
+    source: .
+    plugin: go
+    go-importpath: github.com/piensa/geo
+    after: [go]
+  go:
+    source-tag: go1.10
