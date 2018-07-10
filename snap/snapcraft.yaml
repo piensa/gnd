@@ -10,7 +10,6 @@ grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: devmode
 
 apps:
-apps:
   geo-bin:
     command: geo
     plugs:
