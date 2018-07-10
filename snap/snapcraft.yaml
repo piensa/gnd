@@ -1,4 +1,4 @@
-name: geo-bin
+name: gnd
 version: master
 summary: ls, cp, mkdir, mirror commands for filesystems and object storage.
 description: |
@@ -10,16 +10,15 @@ grade: stable
 confinement: strict
 
 apps:
-  geo:
-    command: geo
+  gnd:
+    command: gnd
     plugs:
       - home
       - mount-observe
       - network
       - removable-media
-    aliases: [geo]
 parts:
-  geo:
+  gnd:
     source: .
     plugin: nil
     build-packages: [make,]
