@@ -10,7 +10,7 @@ grade: stable
 confinement: strict
 
 apps:
-  geo-bin:
+  geo:
     command: geo
     plugs:
       - home
