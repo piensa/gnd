@@ -54,7 +54,7 @@ spelling:
 	@${GOPATH}/bin/misspell -error `find pkg/`
 	@${GOPATH}/bin/misspell -error `find docs/`
 
-# Builds geo, runs the verifiers then runs the tests.
+# Builds gnd, runs the verifiers then runs the tests.
 check: test
 test: verifiers build
 	@echo "Running unit tests"
@@ -63,13 +63,13 @@ test: verifiers build
 	@(env bash $(PWD)/functional-tests.sh)
 
 coverage: build
-	@echo "Running all coverage for geo"
+	@echo "Running all coverage for gnd"
 	@(env bash $(PWD)/buildscripts/go-coverage.sh)
 
-# Builds geo locally.
+# Builds gnd locally.
 build: checks
-	@echo "Building geo binary to './geo'"
-	@CGO_ENABLED=0 go build -tags kqueue --ldflags $(BUILD_LDFLAGS) -o $(PWD)/geo
+	@echo "Building gnd binary to './gnd'"
+	@CGO_ENABLED=0 go build -tags kqueue --ldflags $(BUILD_LDFLAGS) -o $(PWD)/gnd
 
 pkg-add:
 	@echo "Adding new package $(PKG)"
@@ -86,15 +86,15 @@ pkg-remove:
 pkg-list:
 	@$(GOPATH)/bin/govendor list
 
-# Builds geo and installs it to $GOPATH/bin.
+# Builds gnd and installs it to $GOPATH/bin.
 install: build
-	@echo "Installing geo binary to '$(GOPATH)/bin/geo'"
-	@mkdir -p $(GOPATH)/bin && cp $(PWD)/geo $(GOPATH)/bin/geo
-	@echo "Installation successful. To learn more, try \"geo --help\"."
+	@echo "Installing gnd binary to '$(GOPATH)/bin/gnd'"
+	@mkdir -p $(GOPATH)/bin && cp $(PWD)/gnd $(GOPATH)/bin/gnd
+	@echo "Installation successful. To learn more, try \"gnd --help\"."
 
 clean:
 	@echo "Cleaning up all the generated files"
 	@find . -name '*.test' | xargs rm -fv
-	@rm -rvf geo
+	@rm -rvf gnd
 	@rm -rvf build
 	@rm -rvf release

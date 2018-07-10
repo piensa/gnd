@@ -28,7 +28,7 @@ parts:
       env GOPATH=$(pwd)/../go make -C ../go/src/github.com/piensa/gnd install
       snapcraftctl build
       mkdir $SNAPCRAFT_PART_INSTALL/bin
-      mv ../go/bin/geo $SNAPCRAFT_PART_INSTALL/bin/
+      mv ../go/bin/gnd $SNAPCRAFT_PART_INSTALL/bin/
     after: [go]
   go:
     source-tag: go1.10.3
