@@ -11,14 +11,14 @@ heal         Heal disks, buckets and objects on Minio server
 ## 1.  Download Minio Client
 ### Docker Stable
 ```
-docker pull piensa/geo
-docker run piensa/geo admin info play
+docker pull piensa/gnd
+docker run piensa/gnd admin info play
 ```
 
 ### Docker Edge
 ```
-docker pull piensa/geo:edge
-docker run piensa/geo:edge admin info play
+docker pull piensa/gnd:edge
+docker run piensa/gnd:edge admin info play
 ```
 
 ### Homebrew (macOS)
@@ -54,8 +54,8 @@ Source installation is intended only for developers and advanced users. `mc upda
 If you do not have a working Golang environment, please follow [How to install Golang](https://docs.minio.io/docs/how-to-install-golang).
 
 ```sh
-go get -d github.com/piensa/geo
-cd ${GOPATH}/src/github.com/piensa/geo
+go get -d github.com/piensa/gnd
+cd ${GOPATH}/src/github.com/piensa/gnd
 make
 ```
 

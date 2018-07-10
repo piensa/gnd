@@ -29,9 +29,9 @@ import (
 
 	"io/ioutil"
 
-	"github.com/piensa/geo/pkg/hookreader"
-	"github.com/piensa/geo/pkg/ioutils"
-	"github.com/piensa/geo/pkg/probe"
+	"github.com/piensa/gnd/pkg/hookreader"
+	"github.com/piensa/gnd/pkg/ioutils"
+	"github.com/piensa/gnd/pkg/probe"
 	"github.com/rjeczalik/notify"
 )
 

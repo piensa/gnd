@@ -23,8 +23,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/piensa/geo/pkg/console"
-	"github.com/piensa/geo/pkg/httptracer"
+	"github.com/piensa/gnd/pkg/console"
+	"github.com/piensa/gnd/pkg/httptracer"
 )
 
 // traceV4 - tracing structure for signature version '4'.

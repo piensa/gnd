@@ -23,9 +23,9 @@ parts:
     plugin: nil
     build-packages: [make,]
     override-build: |     
-      mkdir -p ../go/src/github.com/piensa/geo
-      cp -R . ../go/src/github.com/piensa/geo
-      env GOPATH=$(pwd)/../go make -C ../go/src/github.com/piensa/geo install
+      mkdir -p ../go/src/github.com/piensa/gnd
+      cp -R . ../go/src/github.com/piensa/gnd
+      env GOPATH=$(pwd)/../go make -C ../go/src/github.com/piensa/gnd install
       snapcraftctl build
       mkdir $SNAPCRAFT_PART_INSTALL/bin
       mv ../go/bin/geo $SNAPCRAFT_PART_INSTALL/bin/

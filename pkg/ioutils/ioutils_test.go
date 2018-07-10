@@ -21,7 +21,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/piensa/geo/pkg/ioutils"
+	"github.com/piensa/gnd/pkg/ioutils"
 
 	. "gopkg.in/check.v1"
 )

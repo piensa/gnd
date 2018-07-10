@@ -19,7 +19,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/piensa/geo/pkg/probe"
+	"github.com/piensa/gnd/pkg/probe"
 	. "gopkg.in/check.v1"
 )
 

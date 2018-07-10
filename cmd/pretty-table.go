@@ -19,7 +19,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/piensa/geo/pkg/console"
+	"github.com/piensa/gnd/pkg/console"
 )
 
 // Field configuration: color theme and max content length

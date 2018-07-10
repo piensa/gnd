@@ -22,7 +22,7 @@ import (
 	"time"
 
 	"github.com/minio/cli"
-	"github.com/piensa/geo/pkg/probe"
+	"github.com/piensa/gnd/pkg/probe"
 )
 
 var (

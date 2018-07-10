@@ -16,7 +16,7 @@
 
 package cmd
 
-import "github.com/piensa/geo/pkg/console"
+import "github.com/piensa/gnd/pkg/console"
 
 // message interface for all structured messages implementing JSON(), String() methods.
 type message interface {

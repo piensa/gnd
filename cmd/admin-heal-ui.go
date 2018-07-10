@@ -26,8 +26,8 @@ import (
 	humanize "github.com/dustin/go-humanize"
 	"github.com/fatih/color"
 	"github.com/minio/minio/pkg/madmin"
-	"github.com/piensa/geo/pkg/console"
-	"github.com/piensa/geo/pkg/probe"
+	"github.com/piensa/gnd/pkg/console"
+	"github.com/piensa/gnd/pkg/probe"
 )
 
 const (

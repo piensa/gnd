@@ -24,7 +24,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/piensa/geo/pkg/probe"
+	"github.com/piensa/gnd/pkg/probe"
 )
 
 // url client url structure

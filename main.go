@@ -16,13 +16,13 @@
 
 /*
  * Below main package has canonical imports for 'go get' and 'go build'
- * to work with all other clones of github.com/piensa/geo repository. For
+ * to work with all other clones of github.com/piensa/gnd repository. For
  * more information refer https://golang.org/doc/go1.4#canonicalimports
  */
 
-package main // import "github.com/piensa/geo"
+package main // import "github.com/piensa/gnd"
 
-import mc "github.com/piensa/geo/cmd"
+import mc "github.com/piensa/gnd/cmd"
 
 func main() {
 	mc.Main()

@@ -29,8 +29,8 @@ import (
 
 	"github.com/minio/minio-go"
 
-	"github.com/piensa/geo/pkg/console"
-	"github.com/piensa/geo/pkg/probe"
+	"github.com/piensa/gnd/pkg/console"
+	"github.com/piensa/gnd/pkg/probe"
 )
 
 func isErrIgnored(err *probe.Error) (ignored bool) {

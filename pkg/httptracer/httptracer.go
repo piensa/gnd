@@ -21,7 +21,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/piensa/geo/pkg/console"
+	"github.com/piensa/gnd/pkg/console"
 )
 
 // HTTPTracer provides callback hook mechanism for HTTP transport.

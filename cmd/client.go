@@ -23,7 +23,7 @@ import (
 	"time"
 
 	minio "github.com/minio/minio-go"
-	"github.com/piensa/geo/pkg/probe"
+	"github.com/piensa/gnd/pkg/probe"
 )
 
 // DirOpt - list directory option.

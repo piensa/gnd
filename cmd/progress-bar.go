@@ -25,7 +25,7 @@ import (
 	"github.com/cheggaaa/pb"
 	"github.com/fatih/color"
 
-	"github.com/piensa/geo/pkg/console"
+	"github.com/piensa/gnd/pkg/console"
 )
 
 // progress extender.

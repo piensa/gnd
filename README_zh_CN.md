@@ -1,5 +1,5 @@
 # Minio客户端快速入门指南
-[![Slack](https://slack.minio.io/slack?type=svg)](https://slack.minio.io) [![Go Report Card](https://goreportcard.com/badge/piensa/geo)](https://goreportcard.com/report/piensa/geo) [![Docker Pulls](https://img.shields.io/docker/pulls/piensa/geo.svg?maxAge=604800)](https://hub.docker.com/r/piensa/geo/)
+[![Slack](https://slack.minio.io/slack?type=svg)](https://slack.minio.io) [![Go Report Card](https://goreportcard.com/badge/piensa/gnd)](https://goreportcard.com/report/piensa/gnd) [![Docker Pulls](https://img.shields.io/docker/pulls/piensa/gnd.svg?maxAge=604800)](https://hub.docker.com/r/piensa/gnd/)
 
 Minio Client (mc)为ls，cat，cp，mirror，diff，find等UNIX命令提供了一种替代方案。它支持文件系统和兼容Amazon S3的云存储服务（AWS Signature v2和v4）。
 
@@ -27,20 +27,20 @@ version  输出版本信息。
 ## Docker容器
 ### 稳定版
 ```
-docker pull piensa/geo
-docker run piensa/geo ls play
+docker pull piensa/gnd
+docker run piensa/gnd ls play
 ```
 
 ### 尝鲜版
 ```
-docker pull piensa/geo:edge
-docker run piensa/geo:edge ls play
+docker pull piensa/gnd:edge
+docker run piensa/gnd:edge ls play
 ```
 
 **注意:** 上述示例默认使用Minio[演示环境](#test-your-setup)做演示，如果想用`mc`操作其它S3兼容的服务，采用下面的方式来启动容器：
 
 ```sh
-docker run -it --entrypoint=/bin/sh piensa/geo
+docker run -it --entrypoint=/bin/sh piensa/gnd
 ```
 
 然后使用[`mc config`命令](#add-a-cloud-storage-service)。
@@ -81,8 +81,8 @@ mc.exe --help
 如果您没有Golang环境，请参照[如何安装Golang](https://docs.minio.io/docs/how-to-install-golang)。
 
 ```sh
-go get -d github.com/piensa/geo
-cd ${GOPATH}/src/github.com/piensa/geo
+go get -d github.com/piensa/gnd
+cd ${GOPATH}/src/github.com/piensa/gnd
 make
 ```
 
@@ -151,10 +151,10 @@ alias find='mc find'
 ```
 
 ### Shell自动补全
-你也可以下载[`autocomplete/bash_autocomplete`](https://raw.githubusercontent.com/piensa/geo/master/autocomplete/bash_autocomplete)到`/etc/bash_completion.d/`，然后将其重命名为`mc`。别忘了在这个文件运行source命令让其在你的当前shell上可用。
+你也可以下载[`autocomplete/bash_autocomplete`](https://raw.githubusercontent.com/piensa/gnd/master/autocomplete/bash_autocomplete)到`/etc/bash_completion.d/`，然后将其重命名为`mc`。别忘了在这个文件运行source命令让其在你的当前shell上可用。
 
 ```sh
-sudo wget https://raw.githubusercontent.com/piensa/geo/master/autocomplete/bash_autocomplete -O /etc/bash_completion.d/mc
+sudo wget https://raw.githubusercontent.com/piensa/gnd/master/autocomplete/bash_autocomplete -O /etc/bash_completion.d/mc
 source /etc/bash_completion.d/mc
 ```
 
@@ -170,4 +170,4 @@ cat      cp       events   mb       pipe     rm       share    version
 - [Minio官方文档](https://docs.minio.io)
 
 ## 贡献
-请遵守Minio[贡献者指南](https://github.com/piensa/geo/blob/master/docs/zh_CN/CONTRIBUTING.md)
+请遵守Minio[贡献者指南](https://github.com/piensa/gnd/blob/master/docs/zh_CN/CONTRIBUTING.md)

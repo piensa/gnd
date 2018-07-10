@@ -38,8 +38,8 @@ import (
 	"github.com/minio/minio-go/pkg/encrypt"
 	"github.com/minio/minio-go/pkg/policy"
 	"github.com/minio/minio-go/pkg/s3utils"
-	"github.com/piensa/geo/pkg/httptracer"
-	"github.com/piensa/geo/pkg/probe"
+	"github.com/piensa/gnd/pkg/httptracer"
+	"github.com/piensa/gnd/pkg/probe"
 )
 
 // S3 client

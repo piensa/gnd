@@ -25,8 +25,8 @@ import (
 	"time"
 
 	"github.com/dustin/go-humanize"
-	"github.com/piensa/geo/pkg/console"
-	"github.com/piensa/geo/pkg/probe"
+	"github.com/piensa/gnd/pkg/console"
+	"github.com/piensa/gnd/pkg/probe"
 )
 
 // printDate - human friendly formatted date.

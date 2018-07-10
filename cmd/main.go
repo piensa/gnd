@@ -30,8 +30,8 @@ import (
 	"github.com/cheggaaa/pb"
 	"github.com/minio/cli"
 	"github.com/minio/minio/pkg/words"
-	"github.com/piensa/geo/pkg/console"
-	"github.com/piensa/geo/pkg/probe"
+	"github.com/piensa/gnd/pkg/console"
+	"github.com/piensa/gnd/pkg/probe"
 	"github.com/pkg/profile"
 )
 

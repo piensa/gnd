@@ -22,7 +22,7 @@ import (
 	"time"
 
 	"github.com/minio/minio/pkg/quick"
-	"github.com/piensa/geo/pkg/probe"
+	"github.com/piensa/gnd/pkg/probe"
 )
 
 /////////////////// Session V6 ///////////////////

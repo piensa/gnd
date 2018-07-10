@@ -23,7 +23,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/piensa/geo/pkg/probe"
+	"github.com/piensa/gnd/pkg/probe"
 	"golang.org/x/net/lex/httplex"
 )
 

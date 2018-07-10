@@ -16,7 +16,7 @@
 
 package cmd
 
-import "github.com/piensa/geo/pkg/probe"
+import "github.com/piensa/gnd/pkg/probe"
 
 // URLs contains source and target urls
 type URLs struct {

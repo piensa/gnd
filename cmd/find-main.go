@@ -23,8 +23,8 @@ import (
 	humanize "github.com/dustin/go-humanize"
 	"github.com/fatih/color"
 	"github.com/minio/cli"
-	"github.com/piensa/geo/pkg/console"
-	"github.com/piensa/geo/pkg/probe"
+	"github.com/piensa/gnd/pkg/console"
+	"github.com/piensa/gnd/pkg/probe"
 )
 
 // List of all flags supported by find command.

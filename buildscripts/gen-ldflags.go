@@ -28,10 +28,10 @@ import (
 
 func genLDFlags(version string) string {
 	var ldflagsStr string
-	ldflagsStr = "-s -w -X github.com/piensa/geo/cmd.Version=" + version + " "
-	ldflagsStr = ldflagsStr + "-X github.com/piensa/geo/cmd.ReleaseTag=" + releaseTag(version) + " "
-	ldflagsStr = ldflagsStr + "-X github.com/piensa/geo/cmd.CommitID=" + commitID() + " "
-	ldflagsStr = ldflagsStr + "-X github.com/piensa/geo/cmd.ShortCommitID=" + commitID()[:12]
+	ldflagsStr = "-s -w -X github.com/piensa/gnd/cmd.Version=" + version + " "
+	ldflagsStr = ldflagsStr + "-X github.com/piensa/gnd/cmd.ReleaseTag=" + releaseTag(version) + " "
+	ldflagsStr = ldflagsStr + "-X github.com/piensa/gnd/cmd.CommitID=" + commitID() + " "
+	ldflagsStr = ldflagsStr + "-X github.com/piensa/gnd/cmd.ShortCommitID=" + commitID()[:12]
 	return ldflagsStr
 }
 

@@ -21,7 +21,7 @@ import (
 	"crypto/x509"
 
 	"github.com/minio/cli"
-	"github.com/piensa/geo/pkg/console"
+	"github.com/piensa/gnd/pkg/console"
 )
 
 // mc configuration related constants.

@@ -19,7 +19,7 @@ main() {
     gopath=$(go env GOPATH)
     IFS=':' read -r -a paths <<< "$gopath"
     for path in "${paths[@]}"; do
-        mcpath="$path/src/github.com/piensa/geo"
+        mcpath="$path/src/github.com/piensa/gnd"
         if [ -d "$mcpath" ]; then
             if [ "$mcpath" -ef "$PWD" ]; then
                exit 0
@@ -27,7 +27,7 @@ main() {
         fi
     done
 
-    echo "Project not found in ${gopath}. Follow instructions at https://github.com/piensa/geo/blob/master/CONTRIBUTING.md#setup-your-mc-github-repository"
+    echo "Project not found in ${gopath}. Follow instructions at https://github.com/piensa/gnd/blob/master/CONTRIBUTING.md#setup-your-mc-github-repository"
     exit 1
 }
 

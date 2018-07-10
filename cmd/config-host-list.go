@@ -22,7 +22,7 @@ import (
 
 	"github.com/fatih/color"
 	"github.com/minio/cli"
-	"github.com/piensa/geo/pkg/console"
+	"github.com/piensa/gnd/pkg/console"
 )
 
 var configHostListCmd = cli.Command{

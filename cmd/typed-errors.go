@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/piensa/geo/pkg/probe"
+	"github.com/piensa/gnd/pkg/probe"
 )
 
 type dummyErr error
