@@ -311,7 +311,7 @@ func registerApp() *cli.App {
 
 	app.HideVersion = true
 	app.HideHelpCommand = true
-	app.Usage = "geo - A gis client"
+	app.Usage = "A gis client"
 	app.Commands = commands
 	app.Author = "piensa.co"
 	app.Version = Version
