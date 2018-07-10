@@ -10,16 +10,28 @@ grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: devmode
 
 apps:
+apps:
   geo-bin:
     command: geo
-    plugs: [home, network, network-bind]
+    plugs:
+      - home
+      - mount-observe
+      - network
+      - network-bind
+      - removable-media
     aliases: [geo]
-
 parts:
   geo:
     source: .
-    plugin: go
-    go-importpath: github.com/piensa/geo
+    plugin: nil
+    build-packages: [make,]
+    override-build: |     
+      mkdir -p ../go/src/github.com/piensa/geo
+      cp -R . ../go/src/github.com/piensa/geo
+      env GOPATH=$(pwd)/../go GOARCH=$TARGET_GOARCH make -C ../go/src/github.com/piensa/geo install
+      snapcraftctl build
+      mkdir $SNAPCRAFT_PART_INSTALL/bin
+      mv ../go/bin/geo $SNAPCRAFT_PART_INSTALL/bin/
     after: [go]
   go:
-    source-tag: go1.10
+    source-tag: go1.10.3

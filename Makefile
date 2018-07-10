@@ -1,6 +1,7 @@
 PWD := $(shell pwd)
 GOPATH := $(shell go env GOPATH)
 LDFLAGS := $(shell go run buildscripts/gen-ldflags.go)
+GOARCH := amd64
 
 BUILD_LDFLAGS := '$(LDFLAGS)'
 
@@ -69,7 +70,7 @@ coverage: build
 # Builds geo locally.
 build: checks
 	@echo "Building geo binary to './geo'"
-	@CGO_ENABLED=0 go build -tags kqueue --ldflags $(BUILD_LDFLAGS) -o $(PWD)/geo
+	@CGO_ENABLED=0 GOARCH=$(GOARCH) go build -tags kqueue --ldflags $(BUILD_LDFLAGS) -o $(PWD)/geo
 
 pkg-add:
 	@echo "Adding new package $(PKG)"
